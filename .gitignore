@@ -1,0 +1,14 @@
+# Entorno virtual
+venv/
+
+# Archivos de base de datos
+hermes.db
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de configuración de entorno
+.env 
