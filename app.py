@@ -8,9 +8,11 @@ import enum
 import json
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
+from dotenv import load_dotenv
 
 # Configuración de la base de datos
-DATABASE_URL = "sqlite:///hermes.db"
+load_dotenv()
+DATABASE_URL = os.environ.get("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
